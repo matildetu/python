@@ -1,11 +1,19 @@
-print "";
-num1 = float (input('Ingrese su primer numero'))
-num2 = float (input('Ingrese su segundo numero'))
-num3 = float (input('Ingrese su tercer numero'))
 
-if num2 < num1 > num3:
-	print ("El numero mayor es el primer numero. Numero:", num1)
-elif num1 < num2 > num3:
-	print ("El numero mayor es el segundo numero. Numero:", num2)
-elif num1 < num3 > num2:
-	print ("El numero mayor es el segundo numero. Numero:", num3)
+def mayor(a,b,c):
+
+	may = ''
+
+	if a > b:
+		if a > c:
+			may=a
+	else:
+		if b > a:
+			if b > c:
+				may=b
+			else:
+				may=c
+
+	return may,a,b,c
+mayornum, x , y , z = mayor(9,20,4)
+
+print "de los numeros: " , x , " , " , y , " , " , z , " el numero mayor es: " , mayornum

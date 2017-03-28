@@ -1,7 +1,13 @@
-n = 13
-h = ''
-while n <= 32:
-    if n%2 != 0:
-        h += ' %i' % n
-    n += 1
-print (h)
+def intercala(x):
+
+	n=x
+	impares=''
+	while n <= 31:
+		if n%2 !=0:
+			impares+='%i, ' % n
+		n+=1
+	return n, impares
+
+numero, lista = intercala(13)
+
+print "lista Numeros impares : ", lista
